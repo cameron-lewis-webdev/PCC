@@ -1,0 +1,197 @@
+@media (max-width: 1400px) {
+    .welcome {
+        
+        .welcome-banner {
+
+            .schedule-grid {
+                width: 70%;
+            }
+
+            .info-grid {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .welcome {
+        
+        .upcoming-events-banner {
+            
+            .event-grid {
+                width: 97%;
+                margin-left: 20px;
+
+                .event.full-calendar {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .welcome {
+        
+        .welcome-banner {
+
+            .schedule-grid {
+                width: 80%;
+            }
+
+            .info-grid {
+                width: 80%;
+            }
+        }
+
+        .upcoming-events-banner {
+            height: 500px;
+            .event-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+
+                .event.full-calendar {
+                    grid-column: span 3;
+                    border-radius: 12px;
+                    width: 55%;
+                    margin: 0 auto;
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+
+                .event.event-item-1,
+                .event.event-item-2,
+                .event.event-item-3 {
+                    height: 100%;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome {
+        
+        .welcome-banner {
+
+            .mission-statement {
+                font-size: 2.4rem;
+            }
+
+            .mission-statement-two {
+                font-size: 1.1rem;
+            }
+
+            .schedule-grid {
+                width: 95%;
+                margin-top: 30px;
+
+                .grid-item {
+
+                    .item-title {
+                        font-size: 1.1rem;
+                    }
+
+                    .item-time {
+                        font-size: 1.1rem;
+                    };
+                }
+            }
+
+            .info-grid {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+
+                .info-link,
+                .livestream-flex {
+                    padding: 7px;
+                    font-size: 1.1rem;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .upcoming-events-banner {
+            padding-top: 10px;
+            height: 100%;
+            padding-bottom: 50px;
+
+            .event-grid {
+                grid-template-columns: 1fr;
+                margin-left: 0;
+                width: 100%;
+
+                .event.full-calendar {
+                    grid-column: span 1;
+                    width: 90%;
+                    margin: 0 auto;
+                    background-color: $secondary-background-color;
+
+                    > div:nth-child(1) {
+                        border: 1px solid grey;
+                        border-radius: 20px;
+                        color: $secondary-text-color;
+
+                        > div:nth-child(1) {
+                            font-family: tangerine, sans-serif;
+                            font-weight: bold;
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+
+                .event.event-item-1,
+                .event.event-item-2,
+                .event.event-item-3 {
+                    width: 85%;
+                    margin: 0 auto;
+                    height: 90%;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+
+    footer {
+        flex-direction: column;
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+
+            .footer-item.item-1 {
+                display: flex;
+                justify-content: center;
+                margin: 10px auto;
+            }
+
+            .footer-item.item-2 {
+                
+                > div:nth-child(1) {
+                    flex-direction: column;
+
+                    div {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                > div:nth-child(2) {
+                    display: none;
+                }
+            }
+
+            .footer-item.item-3 {
+                width: 15%;
+                justify-content: space-between;
+                a {
+                    svg {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
