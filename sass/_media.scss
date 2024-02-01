@@ -124,6 +124,7 @@
                 grid-template-columns: 1fr;
                 margin-left: 0;
                 width: 100%;
+                margin-top: 20px;
 
                 .event.full-calendar {
                     grid-column: span 1;
@@ -135,6 +136,7 @@
                         border: 1px solid grey;
                         border-radius: 20px;
                         color: $secondary-text-color;
+                        background-color: $button-background-color;
 
                         > div:nth-child(1) {
                             font-family: tangerine, sans-serif;
