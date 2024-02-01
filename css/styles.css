@@ -23,6 +23,12 @@ body {
   font-family: lato, sans-serif;
 }
 
+nav {
+  background-color: rgb(87, 198, 102);
+}
+nav .container .collapse ul li .nav-link {
+  color: white;
+}
 nav .container .navbar-brand img {
   width: 275px;
   transition-duration: 0.2s;
@@ -37,7 +43,7 @@ nav .container .navbar-brand img:hover {
 .welcome .welcome-banner {
   width: 100%;
   height: 500px;
-  background-color: black;
+  background-color: rgb(0, 52, 103);
   padding-top: 30px;
 }
 .welcome .welcome-banner .mission-statement,
@@ -90,25 +96,25 @@ nav .container .navbar-brand img:hover {
   align-self: center;
   text-decoration: none;
   color: black;
-  background-color: white;
+  background-color: #fff;
   width: 175px;
   text-align: center;
   padding: 10px;
-  border: 2px solid gray;
+  border: 3px solid rgb(87, 198, 102);
   border-radius: 12px;
   font-size: 1.2rem;
   transition-duration: 0.25s;
 }
 .welcome .welcome-banner .info-grid .info-link:hover {
-  background-color: black;
+  background-color: rgb(87, 198, 102);
   color: white;
 }
 .welcome .welcome-banner .info-grid .livestream-flex {
-  background-color: black;
+  background-color: rgb(87, 198, 102);
   width: 175px;
   padding: 10px;
   margin: 0 auto;
-  border: 2px solid grey;
+  border: 3px solid white;
   border-radius: 12px;
   font-size: 1.2rem;
   display: flex;
@@ -125,7 +131,7 @@ nav .container .navbar-brand img:hover {
   color: red;
 }
 .welcome .welcome-banner .info-grid .livestream-flex:hover {
-  background-color: white;
+  background-color: #fff;
   border: 2px solid white;
 }
 .welcome .welcome-banner .info-grid .livestream-flex:hover div {
@@ -134,7 +140,7 @@ nav .container .navbar-brand img:hover {
 .welcome .upcoming-events-banner {
   width: 100%;
   height: 400px;
-  background-color: white;
+  background-color: rgb(87, 198, 102);
   padding-top: 30px;
 }
 .welcome .upcoming-events-banner .event-grid {
@@ -150,7 +156,7 @@ nav .container .navbar-brand img:hover {
   border-radius: 0px 50% 50% 0px;
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: rgb(0, 52, 103);
 }
 .welcome .upcoming-events-banner .event-grid .event.full-calendar > div:nth-child(1) {
   margin: 0 auto;
@@ -166,8 +172,11 @@ nav .container .navbar-brand img:hover {
   height: 80%;
   margin: 0 auto;
   width: 95%;
-  border: 1px solid gray;
+  border: 2px solid white;
+  border-radius: 12px;
   align-self: center;
+  background-color: rgb(0, 52, 103);
+  color: white;
 }
 .welcome .upcoming-events-banner .event-grid .event.event-item-1 > div:nth-child(1),
 .welcome .upcoming-events-banner .event-grid .event.event-item-2 > div:nth-child(1),
@@ -196,7 +205,7 @@ nav .container .navbar-brand img:hover {
 }
 
 footer {
-  background-color: black;
+  background-color: rgb(0, 52, 103);
   color: white;
   height: 250px;
   display: flex;
@@ -207,6 +216,7 @@ footer .footer-grid {
   grid-template-columns: 1fr 3fr 1fr;
   width: 90%;
   margin: 0 auto;
+  margin-top: 20px;
 }
 footer .footer-grid .footer-item.item-1 img {
   width: 60%;
@@ -237,6 +247,7 @@ footer .footer-grid .footer-item.item-3 {
 footer .footer-grid .footer-item.item-3 a svg {
   width: 100%;
   margin: 0 10px;
+  color: white;
 }
 
 @media (max-width: 1400px) {
@@ -323,17 +334,19 @@ footer .footer-grid .footer-item.item-3 a svg {
     grid-template-columns: 1fr;
     margin-left: 0;
     width: 100%;
+    margin-top: 20px;
   }
   .welcome .upcoming-events-banner .event-grid .event.full-calendar {
     grid-column: span 1;
     width: 90%;
     margin: 0 auto;
-    background-color: white;
+    background-color: rgb(87, 198, 102);
   }
   .welcome .upcoming-events-banner .event-grid .event.full-calendar > div:nth-child(1) {
     border: 1px solid grey;
     border-radius: 20px;
     color: black;
+    background-color: #fff;
   }
   .welcome .upcoming-events-banner .event-grid .event.full-calendar > div:nth-child(1) > div:nth-child(1) {
     font-family: tangerine, sans-serif;
@@ -361,6 +374,10 @@ footer .footer-grid .footer-item.item-3 a svg {
   }
   footer .footer-grid .footer-item.item-2 > div:nth-child(1) {
     flex-direction: column;
+  }
+  footer .footer-grid .footer-item.item-2 > div:nth-child(1) > div:nth-child(1),
+  footer .footer-grid .footer-item.item-2 > div:nth-child(1) > div:nth-child(2) {
+    margin-right: 0;
   }
   footer .footer-grid .footer-item.item-2 > div:nth-child(1) div {
     margin-bottom: 10px;
