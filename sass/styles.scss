@@ -1,132 +1,175 @@
-@media (max-width: 1400px) {
-    .welcome {
-        
-        .welcome-banner {
+@import 'config';
 
-            .schedule-grid {
-                width: 70%;
-            }
-
-            .info-grid {
-                width: 70%;
-            }
-        }
-    }
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-@media (max-width: 1200px) {
-    .welcome {
-        
-        .upcoming-events-banner {
-            
-            .event-grid {
-                width: 97%;
-                margin-left: 20px;
-
-                .event.full-calendar {
-                    width: 90%;
-                }
-            }
-        }
-    }
+body {
+    font-family: lato, sans-serif;
 }
 
-@media (min-width: 1025px) {
-    nav {
-        width: 90%;
-        margin: 0 auto;
-    }
+// Navbar
 
-    .welcome {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
+nav {
 
-@media (max-width: 992px) {
-    .welcome {
-        
-        .welcome-banner {
+    background-color: $secondary-background-color;
 
-            .schedule-grid {
-                width: 80%;
-            }
+    .container {
 
-            .info-grid {
-                width: 80%;
-            }
-        }
-
-        .upcoming-events-banner {
-            height: 500px;
-            .event-grid {
-                grid-template-columns: 1fr 1fr 1fr;
-
-                .event.full-calendar {
-                    grid-column: span 3;
-                    border-radius: 12px;
-                    width: 55%;
-                    margin: 0 auto;
-                    text-align: center;
-                    padding-bottom: 10px;
-                }
-
-                .event.event-item-1,
-                .event.event-item-2,
-                .event.event-item-3 {
-                    height: 100%;
-                    margin-top: 30px;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .welcome {
-
-        // Welcoem Banner
-        
-        .welcome-banner {
-
-            .mission-statement {
-                font-size: 2.4rem;
-                width: 90%;
-            }
-
-            .mission-statement-two {
-                font-size: 1rem;
-                width: 90%;
-            }
-
-            .schedule-grid {
-                width: 95%;
-                margin-top: 30px;
-
-                .grid-item {
-
-                    .item-title {
-                        font-size: 1.1rem;
+        .collapse {
+            ul {
+                li {
+                    .nav-link {
+                        color: white;
                     }
+                }
+            }
+        }
 
+        .navbar-brand {
+            img {
+                width: 275px;
+                transition-duration: 0.2s;
+            }
+
+            img:hover {
+                opacity: 0.5;
+            }
+        }
+
+        form {
+            button {
+                color: white;
+                border: 1px solid white;
+            }
+        }
+    }
+}
+
+// Welcome Page
+
+.welcome {
+
+    width: 100%;
+
+    // Welcome Banner
+
+    .welcome-banner {
+        width: 100%;
+        height: 500px;
+        background-color: $primary-background-color;
+        padding-top: 30px;
+
+            .mission-statement,
+            .mission-statement-two {
+                color: $primary-text-color;
+                width: 80%;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            .mission-statement {
+                font-size: 4rem;
+                font-weight: bold;
+                font-family: tangerine, Arial, Helvetica, sans-serif;
+            }
+    
+            .mission-statement-two {
+                font-size: 1.5rem;
+                font-family: roboto, Arial, Helvetica, sans-serif;
+            }
+
+            .cross {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+    
+            .schedule-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 50%;
+                margin: 0 auto;
+                color: $primary-text-color;
+                margin-top: 40px;
+    
+                .grid-item {
+                    width: 100%;
+                    justify-self: center;
+                    text-align: center;
+    
+                    .item-title {
+                        font-size: 1.5rem;
+                    }
+    
                     .item-time {
                         font-size: 1.1rem;
-                    };
+                    }
+                }
+    
+                .grid-item.item-1,
+                .grid-item.item-2 {
+                    border-right: 1px solid $tertiary-background-color;
                 }
             }
-
+    
             .info-grid {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 40%;
+                margin: 0 auto;
+                margin-top: 60px;
+    
+                .info-link {
+                    justify-self: center;
+                    align-self: center;
+                    text-decoration: none;
+                    color: $tertiary-text-color;
+                    background-color: $button-background-color;
+                    width: 175px;
+                    text-align: center;
+                    padding: 10px;
+                    border-radius: 12px;
+                    font-size: 1.2rem;
+                    transition-duration: 0.25s;
+                }
+    
+                .info-link:hover {
+                    background-color: $secondary-background-color;
+                    color: $primary-text-color;
+                }
 
-                .info-link,
                 .livestream-flex {
-                    padding: 7px;
-                    font-size: 1.1rem;
-                    margin-bottom: 15px;
+                    background-color: $secondary-background-color;
+                    width: 175px;
+                    padding: 10px;
+                    margin: 0 auto;
+                    border-radius: 12px;
+                    font-size: 1.2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    transition-duration: 0.2s;
+
+                    div {
+                        margin-right: 5px;
+                        color: $tertiary-text-color;
+                    }
+
+                    svg {
+                        color: red;
+                    }
+                }
+
+                .livestream-flex:hover {
+                    background-color: $button-background-color;
+                    border: 2px solid white;
+                    div {
+                        color: red;
+                    }
                 }
             }
         }
@@ -134,36 +177,33 @@
         // Upcoming Events Banner
 
         .upcoming-events-banner {
-            padding-top: 10px;
-            height: 100%;
-            padding-bottom: 50px;
+            width: 100%;
+            height: 400px;
+            background-color: $tertiary-background-color;
+            padding-top: 30px;
 
             .event-grid {
-                grid-template-columns: 1fr;
-                margin-left: 0;
-                width: 100%;
-                margin-top: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                width: 90%;
+                height: 95%;
+                margin-left: 50px;
 
                 .event.full-calendar {
-                    grid-column: span 1;
-                    width: 90%;
-                    margin: 0 auto;
-                    background-color: $tertiary-background-color;
+                    height: 100%;
+                    width: 80%;
+                    border-radius: 0px 50% 50% 0px;
+                    display: flex;
+                    align-items: center;
+                    background-color: $primary-background-color;
 
                     > div:nth-child(1) {
-                        border: 1px solid grey;
-                        border-radius: 20px;
-                        color: $secondary-text-color;
-                        background-color: $primary-background-color;
+                        margin: 0 auto;
+                        width: 80%;
+                        color: $primary-text-color;
 
                         > div:nth-child(1) {
-                            font-family: tangerine, sans-serif;
-                            font-weight: bold;
                             font-size: 2.5rem;
-                        }
-
-                        > div:nth-child(2) {
-                            padding-bottom: 5px;
                         }
                     }
                 }
@@ -171,58 +211,98 @@
                 .event.event-item-1,
                 .event.event-item-2,
                 .event.event-item-3 {
-                    width: 85%;
+                    height: 80%;
                     margin: 0 auto;
-                    height: 90%;
-                    padding: 5px 0;
+                    width: 95%;
+                    border: 2px solid $secondary-background-color;
+                    align-self: center;
+                    background-color: $primary-background-color;
+                    color: $primary-text-color;
+
+                    > div:nth-child(1) {
+                        height: 80%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    > div:nth-child(2) {
+                        height: 10%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                    }
+                }
+
+                .event.event-item-1,
+                .event.event-item-2 {
+                    margin-right: 20px;
                 }
             }
         }
     }
 
-    footer {
-        flex-direction: column;
-        background-color: $secondary-background-color;
-        color: $tertiary-text-color;
+footer {
+    background-color: $primary-background-color;
+    color: $primary-text-color;
+    height: 250px;
+    display: flex;
+    align-items: center;
 
-        .footer-grid {
-            grid-template-columns: 1fr;
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
 
-            .footer-item.item-1 {
+        .footer-item.item-1 {
+
+            img {
+                width: 60%;
+            }
+        }
+
+        .footer-item.item-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            > div:nth-child(1) {
                 display: flex;
-                justify-content: center;
-                margin: 10px auto;
-            }
+                text-align: center;
 
-            .footer-item.item-2 {
-                
-                > div:nth-child(1) {
-                    flex-direction: column;
-
-                    > div:nth-child(1),
-                    > div:nth-child(2) {
-                        margin-right: 0;
-                    }
-                
-                    div {
-                        margin-bottom: 10px;
-                    }
-                }
-
+                > div:nth-child(1),
                 > div:nth-child(2) {
-                    display: none;
+                    margin-right: 20px;
                 }
             }
 
-            .footer-item.item-3 {
-                width: 15%;
-                justify-content: space-between;
-                a {
-                    svg {
-                        margin: 0 auto;
-                    }
+            > div:nth-child(2) {
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+
+        .footer-item.item-3 {
+            display: flex;
+            align-self: center;
+            justify-self: center;
+            a {
+                svg {
+                    width: 100%;
+                    margin: 0 10px;
+                    color: white;
                 }
             }
         }
     }
 }
+
+@import 'media';
+
+
