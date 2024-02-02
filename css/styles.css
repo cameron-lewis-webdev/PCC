@@ -36,6 +36,10 @@ nav .container .navbar-brand img {
 nav .container .navbar-brand img:hover {
   opacity: 0.5;
 }
+nav .container form button {
+  color: white;
+  border: 1px solid white;
+}
 
 .welcome {
   width: 100%;
@@ -43,30 +47,36 @@ nav .container .navbar-brand img:hover {
 .welcome .welcome-banner {
   width: 100%;
   height: 500px;
-  background-color: rgb(0, 52, 103);
+  background-color: #fff;
   padding-top: 30px;
 }
 .welcome .welcome-banner .mission-statement,
 .welcome .welcome-banner .mission-statement-two {
-  color: white;
+  color: rgb(0, 52, 103);
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 .welcome .welcome-banner .mission-statement {
   font-size: 4rem;
+  font-weight: bold;
   font-family: tangerine, Arial, Helvetica, sans-serif;
 }
 .welcome .welcome-banner .mission-statement-two {
   font-size: 1.5rem;
-  font-family: recursive, Arial, Helvetica, sans-serif;
+  font-family: roboto, Arial, Helvetica, sans-serif;
+}
+.welcome .welcome-banner .cross {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 .welcome .welcome-banner .schedule-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 50%;
   margin: 0 auto;
-  color: white;
+  color: rgb(0, 52, 103);
   margin-top: 40px;
 }
 .welcome .welcome-banner .schedule-grid .grid-item {
@@ -82,7 +92,7 @@ nav .container .navbar-brand img:hover {
 }
 .welcome .welcome-banner .schedule-grid .grid-item.item-1,
 .welcome .welcome-banner .schedule-grid .grid-item.item-2 {
-  border-right: 1px solid white;
+  border-right: 1px solid rgb(0, 52, 103);
 }
 .welcome .welcome-banner .info-grid {
   display: grid;
@@ -95,26 +105,24 @@ nav .container .navbar-brand img:hover {
   justify-self: center;
   align-self: center;
   text-decoration: none;
-  color: black;
-  background-color: #fff;
+  color: #fff;
+  background-color: rgb(0, 52, 103);
   width: 175px;
   text-align: center;
   padding: 10px;
-  border: 3px solid rgb(87, 198, 102);
   border-radius: 12px;
   font-size: 1.2rem;
   transition-duration: 0.25s;
 }
 .welcome .welcome-banner .info-grid .info-link:hover {
   background-color: rgb(87, 198, 102);
-  color: white;
+  color: rgb(0, 52, 103);
 }
 .welcome .welcome-banner .info-grid .livestream-flex {
   background-color: rgb(87, 198, 102);
   width: 175px;
   padding: 10px;
   margin: 0 auto;
-  border: 3px solid white;
   border-radius: 12px;
   font-size: 1.2rem;
   display: flex;
@@ -125,13 +133,13 @@ nav .container .navbar-brand img:hover {
 }
 .welcome .welcome-banner .info-grid .livestream-flex div {
   margin-right: 5px;
-  color: white;
+  color: #fff;
 }
 .welcome .welcome-banner .info-grid .livestream-flex svg {
   color: red;
 }
 .welcome .welcome-banner .info-grid .livestream-flex:hover {
-  background-color: #fff;
+  background-color: rgb(0, 52, 103);
   border: 2px solid white;
 }
 .welcome .welcome-banner .info-grid .livestream-flex:hover div {
@@ -140,7 +148,7 @@ nav .container .navbar-brand img:hover {
 .welcome .upcoming-events-banner {
   width: 100%;
   height: 400px;
-  background-color: rgb(87, 198, 102);
+  background-color: rgb(0, 52, 103);
   padding-top: 30px;
 }
 .welcome .upcoming-events-banner .event-grid {
@@ -156,12 +164,12 @@ nav .container .navbar-brand img:hover {
   border-radius: 0px 50% 50% 0px;
   display: flex;
   align-items: center;
-  background-color: rgb(0, 52, 103);
+  background-color: #fff;
 }
 .welcome .upcoming-events-banner .event-grid .event.full-calendar > div:nth-child(1) {
   margin: 0 auto;
   width: 80%;
-  color: white;
+  color: rgb(0, 52, 103);
 }
 .welcome .upcoming-events-banner .event-grid .event.full-calendar > div:nth-child(1) > div:nth-child(1) {
   font-size: 2.5rem;
@@ -172,11 +180,10 @@ nav .container .navbar-brand img:hover {
   height: 80%;
   margin: 0 auto;
   width: 95%;
-  border: 2px solid white;
-  border-radius: 12px;
+  border: 2px solid rgb(87, 198, 102);
   align-self: center;
-  background-color: rgb(0, 52, 103);
-  color: white;
+  background-color: #fff;
+  color: rgb(0, 52, 103);
 }
 .welcome .upcoming-events-banner .event-grid .event.event-item-1 > div:nth-child(1),
 .welcome .upcoming-events-banner .event-grid .event.event-item-2 > div:nth-child(1),
@@ -205,8 +212,8 @@ nav .container .navbar-brand img:hover {
 }
 
 footer {
-  background-color: rgb(0, 52, 103);
-  color: white;
+  background-color: #fff;
+  color: rgb(0, 52, 103);
   height: 250px;
   display: flex;
   align-items: center;
@@ -267,6 +274,16 @@ footer .footer-grid .footer-item.item-3 a svg {
     width: 90%;
   }
 }
+@media (min-width: 1025px) {
+  nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .welcome {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 992px) {
   .welcome .welcome-banner .schedule-grid {
     width: 80%;
@@ -298,9 +315,11 @@ footer .footer-grid .footer-item.item-3 a svg {
 @media (max-width: 768px) {
   .welcome .welcome-banner .mission-statement {
     font-size: 2.4rem;
+    width: 90%;
   }
   .welcome .welcome-banner .mission-statement-two {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    width: 90%;
   }
   .welcome .welcome-banner .schedule-grid {
     width: 95%;
@@ -340,7 +359,7 @@ footer .footer-grid .footer-item.item-3 a svg {
     grid-column: span 1;
     width: 90%;
     margin: 0 auto;
-    background-color: rgb(87, 198, 102);
+    background-color: rgb(0, 52, 103);
   }
   .welcome .upcoming-events-banner .event-grid .event.full-calendar > div:nth-child(1) {
     border: 1px solid grey;
@@ -353,6 +372,9 @@ footer .footer-grid .footer-item.item-3 a svg {
     font-weight: bold;
     font-size: 2.5rem;
   }
+  .welcome .upcoming-events-banner .event-grid .event.full-calendar > div:nth-child(1) > div:nth-child(2) {
+    padding-bottom: 5px;
+  }
   .welcome .upcoming-events-banner .event-grid .event.event-item-1,
   .welcome .upcoming-events-banner .event-grid .event.event-item-2,
   .welcome .upcoming-events-banner .event-grid .event.event-item-3 {
@@ -363,6 +385,8 @@ footer .footer-grid .footer-item.item-3 a svg {
   }
   footer {
     flex-direction: column;
+    background-color: rgb(87, 198, 102);
+    color: #fff;
   }
   footer .footer-grid {
     grid-template-columns: 1fr;
