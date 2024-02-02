@@ -36,6 +36,9 @@ nav .container .navbar-brand img {
 nav .container .navbar-brand img:hover {
   opacity: 0.5;
 }
+nav .container .navbar-toggler {
+  border: 1.5px solid white;
+}
 nav .container form button {
   color: white;
   border: 1px solid white;
