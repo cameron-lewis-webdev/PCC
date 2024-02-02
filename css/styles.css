@@ -139,7 +139,11 @@ nav .container form button {
   color: #fff;
 }
 .welcome .welcome-banner .info-grid .livestream-flex svg {
+  background-color: red;
+  border-radius: 50%;
   color: red;
+  height: 10px;
+  width: 10px;
 }
 .welcome .welcome-banner .info-grid .livestream-flex:hover {
   background-color: rgb(0, 52, 103);
