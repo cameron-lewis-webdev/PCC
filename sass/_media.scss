@@ -31,6 +31,18 @@
     }
 }
 
+@media (min-width: 1025px) {
+    nav {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .welcome {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 992px) {
     .welcome {
         
@@ -72,15 +84,19 @@
 
 @media (max-width: 768px) {
     .welcome {
+
+        // Welcoem Banner
         
         .welcome-banner {
 
             .mission-statement {
                 font-size: 2.4rem;
+                width: 90%;
             }
 
             .mission-statement-two {
-                font-size: 1.1rem;
+                font-size: 1rem;
+                width: 90%;
             }
 
             .schedule-grid {
@@ -115,6 +131,8 @@
             }
         }
 
+        // Upcoming Events Banner
+
         .upcoming-events-banner {
             padding-top: 10px;
             height: 100%;
@@ -130,18 +148,22 @@
                     grid-column: span 1;
                     width: 90%;
                     margin: 0 auto;
-                    background-color: $secondary-background-color;
+                    background-color: $tertiary-background-color;
 
                     > div:nth-child(1) {
                         border: 1px solid grey;
                         border-radius: 20px;
                         color: $secondary-text-color;
-                        background-color: $button-background-color;
+                        background-color: $primary-background-color;
 
                         > div:nth-child(1) {
                             font-family: tangerine, sans-serif;
                             font-weight: bold;
                             font-size: 2.5rem;
+                        }
+
+                        > div:nth-child(2) {
+                            padding-bottom: 5px;
                         }
                     }
                 }
@@ -160,6 +182,8 @@
 
     footer {
         flex-direction: column;
+        background-color: $secondary-background-color;
+        color: $tertiary-text-color;
 
         .footer-grid {
             grid-template-columns: 1fr;
