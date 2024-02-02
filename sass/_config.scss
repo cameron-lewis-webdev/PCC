@@ -33,8 +33,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 
-$primary-text-color: white; // orig. white
+$primary-text-color: rgb(0, 52, 103); // orig. white
 $secondary-text-color: black; // orig. black
-$primary-background-color: rgb(0, 52, 103); // orig. black
+$tertiary-text-color: #fff;
+$primary-background-color: #fff; // orig. black
 $secondary-background-color: rgb(87, 198, 102); // orig. white
-$button-background-color: #fff;
+$tertiary-background-color: rgb(0, 52, 103);
+$button-background-color: rgb(0, 52, 103);
